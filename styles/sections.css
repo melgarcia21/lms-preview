@@ -4,7 +4,7 @@
   /* Dashboard */
 
   .dashboard-container {
-    @apply px-36 py-12 bg-gray-100 min-h-screen;
+    @apply px-4 sm:px-6 md:px-12 lg:px-24 xl:px-36 py-6 sm:py-8 md:py-12 bg-gray-100 min-h-screen;
   }
 
   .dashboard-content {
@@ -12,19 +12,19 @@
   }
 
   .dashboard-header {
-    @apply text-2xl font-bold mb-6;
+    @apply text-xl sm:text-2xl font-bold mb-4 sm:mb-6;
   }
 
   .stats-grid {
-    @apply grid grid-cols-1 md:grid-cols-4 gap-4 mb-8;
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8;
   }
 
   .recommended-header {
-    @apply text-xl font-semibold mb-4;
+    @apply text-lg sm:text-xl font-semibold mb-3 sm:mb-4;
   }
 
   .courses-grid {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8;
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-8;
   }
 
   .course-card {
@@ -32,7 +32,7 @@
   }
 
   .course-image-container {
-    @apply h-40 relative flex items-center justify-center bg-gray-100;
+    @apply h-32 sm:h-40 relative flex items-center justify-center bg-gray-100;
   }
 
   .course-image {
@@ -44,11 +44,11 @@
   }
 
   .course-details {
-    @apply p-4;
+    @apply p-3 sm:p-4;
   }
 
   .course-title {
-    @apply font-semibold text-lg mb-2;
+    @apply font-semibold text-base sm:text-lg mb-2;
   }
 
   .course-instructor {
@@ -56,15 +56,15 @@
   }
 
   .instructor-avatar {
-    @apply w-6 h-6 rounded-full bg-gray-300 mr-2;
+    @apply w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gray-300 mr-2;
   }
 
   .instructor-name {
-    @apply text-sm text-gray-600;
+    @apply text-xs sm:text-sm text-gray-600;
   }
 
   .course-meta {
-    @apply flex items-center text-sm mb-2;
+    @apply flex items-center text-xs sm:text-sm mb-2;
   }
 
   .course-rating {
@@ -84,29 +84,29 @@
   }
 
   .enrollment-icon {
-    @apply w-4 h-4 mr-1;
+    @apply w-3 h-3 sm:w-4 sm:h-4 mr-1;
   }
 
   /* Courses Selection */
 
   .courses-container {
-    @apply container mx-auto px-4 md:px-8 lg:px-12 xl:px-32 py-8;
+    @apply container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-32 py-4 sm:py-8;
   }
 
   .courses-header {
-    @apply text-2xl font-bold mb-4;
+    @apply text-xl sm:text-2xl font-bold mb-3 sm:mb-4;
   }
 
   .courses-toolbar {
-    @apply flex flex-col md:flex-row justify-between items-center mb-6 gap-4;
+    @apply flex flex-col md:flex-row justify-between items-start md:items-center mb-4 sm:mb-6 gap-3 sm:gap-4;
   }
 
   .categories-tabs {
-    @apply flex flex-wrap gap-2 md:space-x-4;
+    @apply flex flex-wrap gap-2 w-full md:w-auto;
   }
 
   .category-tab {
-    @apply px-4 py-2 rounded transition-colors;
+    @apply px-3 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base rounded transition-colors;
   }
 
   .active-tab {
@@ -118,11 +118,11 @@
   }
 
   .view-toggle {
-    @apply flex rounded-lg p-1 bg-gray-100;
+    @apply flex rounded-lg p-1 bg-gray-100 mt-3 md:mt-0;
   }
 
   .view-button {
-    @apply p-2 rounded flex items-center transition-colors;
+    @apply p-1.5 sm:p-2 rounded flex items-center transition-colors;
   }
 
   .active-view {
@@ -135,36 +135,36 @@
 
   /* Grid View */
   .courses-grid {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6;
   }
 
   .course-card-grid {
-    @apply bg-white rounded-xl shadow hover:shadow-lg transition-shadow flex flex-col justify-between h-[480px];
+    @apply bg-white rounded-xl shadow hover:shadow-lg transition-shadow flex flex-col justify-between h-auto sm:h-[400px] md:h-[450px] lg:h-[480px];
   }
 
   .course-image-grid {
-    @apply w-full h-44 object-cover rounded-t-xl;
+    @apply w-full h-36 sm:h-40 md:h-44 object-cover rounded-t-xl;
   }
 
   .course-details-grid {
-    @apply flex-1 flex flex-col px-6 pt-4;
+    @apply flex-1 flex flex-col px-4 sm:px-6 pt-3 sm:pt-4;
   }
 
   /* List View */
   .courses-list {
-    @apply flex flex-col gap-6;
+    @apply flex flex-col gap-4 sm:gap-6;
   }
 
   .course-card-horizontal {
-    @apply bg-white rounded-xl shadow hover:shadow-lg transition-shadow flex flex-col md:flex-row h-auto md:h-56;
+    @apply bg-white rounded-xl shadow hover:shadow-lg transition-shadow flex flex-col md:flex-row h-auto md:h-48 lg:h-56;
   }
 
   .course-image-horizontal {
-    @apply w-full md:w-56 h-40 md:h-full object-cover rounded-t-xl md:rounded-none md:rounded-l-xl;
+    @apply w-full md:w-40 lg:w-56 h-36 sm:h-40 md:h-full object-cover rounded-t-xl md:rounded-none md:rounded-l-xl;
   }
 
   .course-details-horizontal {
-    @apply flex-1 flex flex-col px-4 md:p-6 justify-between gap-4;
+    @apply flex-1 flex flex-col px-4 py-3 md:p-4 lg:p-6 justify-between gap-2 sm:gap-4;
   }
 
   .course-info-horizontal {
@@ -173,62 +173,62 @@
 
   /* Common styles */
   .course-title {
-    @apply font-bold text-lg mb-2;
+    @apply font-bold text-base sm:text-lg mb-1.5 sm:mb-2;
   }
 
   .course-instructor {
-    @apply flex items-center mb-3;
+    @apply flex items-center mb-2 sm:mb-3;
   }
 
   .instructor-avatar {
-    @apply w-7 h-7 rounded-full mr-2;
+    @apply w-6 h-6 sm:w-7 sm:h-7 rounded-full mr-2;
   }
 
   .instructor-name {
-    @apply text-sm text-gray-700;
+    @apply text-xs sm:text-sm text-gray-700;
   }
 
   .course-progress-text {
-    @apply text-sm text-gray-800 mb-2;
+    @apply text-xs sm:text-sm text-gray-800 mb-1 sm:mb-2;
   }
 
   .course-progress-bar {
-    @apply mb-2;
+    @apply mb-1 sm:mb-2;
   }
 
   .course-progress-percentage {
-    @apply text-sm text-gray-800 mb-2;
+    @apply text-xs sm:text-sm text-gray-800 mb-1 sm:mb-2;
   }
 
   .course-progress-container {
-    @apply w-full max-w-full mt-2;
+    @apply w-full max-w-full mt-1 sm:mt-2;
   }
 
   .course-actions {
-    @apply px-6 pb-6;
+    @apply px-4 sm:px-6 pb-4 sm:pb-6;
   }
 
   .view-course-button {
-    @apply block w-full border border-gray-400 rounded-md py-2 text-center font-medium hover:bg-gray-100 transition;
+    @apply block w-full border border-gray-400 rounded-md py-1.5 sm:py-2 text-center text-sm sm:text-base font-medium hover:bg-gray-100 transition;
   }
 
   .course-actions-horizontal {
-    @apply mt-4 md:mt-0 px-4 pb-4 md:p-0 flex justify-end items-end;
+    @apply mt-2 sm:mt-4 md:mt-0 px-4 pb-4 md:p-0 flex justify-end items-end;
   }
 
   .view-course-button-horizontal {
-    @apply block text-sm border border-gray-400 rounded-md px-4 py-1.5 text-center font-medium;
+    @apply block text-xs sm:text-sm border border-gray-400 rounded-md px-3 sm:px-4 py-1 sm:py-1.5 text-center font-medium;
     @apply hover:bg-gray-100 transition whitespace-nowrap;
   }
 
   /* Course View */
 
   .course-detail-container {
-    @apply bg-gray-100 min-h-screen p-6 mx-100;
+    @apply bg-gray-100 min-h-screen p-3 sm:p-4 md:p-6 mx-0 sm:mx-4 md:mx-6 lg:mx-12 xl:mx-24;
   }
 
   .back-link-container {
-    @apply mb-6;
+    @apply mb-4 sm:mb-6;
   }
 
   .back-link {
@@ -236,31 +236,31 @@
   }
 
   .back-icon {
-    @apply w-4 h-4 mr-1;
+    @apply w-3 h-3 sm:w-4 sm:h-4 mr-1;
   }
 
   .course-header-card {
-    @apply bg-white rounded-lg shadow-lg overflow-hidden mb-8;
+    @apply bg-white rounded-lg shadow-lg overflow-hidden mb-6 sm:mb-8;
   }
 
   .course-title-banner {
-    @apply bg-blue-100 h-48 flex items-center justify-center;
+    @apply bg-blue-100 h-32 sm:h-40 md:h-48 flex items-center justify-center p-4 text-center;
   }
 
   .course-title {
-    @apply text-blue-900 font-bold;
+    @apply text-blue-900 font-bold text-lg sm:text-xl md:text-2xl;
   }
 
   .course-info-container {
-    @apply p-6;
+    @apply p-4 sm:p-6;
   }
 
   .instructor-profile {
-    @apply flex items-center mb-4;
+    @apply flex items-center mb-3 sm:mb-4;
   }
 
   .instructor-avatar {
-    @apply w-10 h-10 rounded-full bg-gray-300 mr-3;
+    @apply w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-300 mr-2 sm:mr-3;
   }
 
   .instructor-info {
@@ -268,55 +268,55 @@
   }
 
   .instructor-name {
-    @apply font-semibold;
+    @apply font-semibold text-sm sm:text-base;
   }
 
   .instructor-role {
-    @apply text-sm text-gray-600;
+    @apply text-xs sm:text-sm text-gray-600;
   }
 
   .course-description {
-    @apply text-gray-700 mb-6;
+    @apply text-sm sm:text-base text-gray-700 mb-4 sm:mb-6;
   }
 
   .progress-section {
-    @apply mb-6;
+    @apply mb-4 sm:mb-6;
   }
 
   .progress-header {
-    @apply flex justify-between mb-2;
+    @apply flex justify-between mb-1 sm:mb-2;
   }
 
   .progress-label {
-    @apply text-sm font-medium text-gray-700;
+    @apply text-xs sm:text-sm font-medium text-gray-700;
   }
 
   .progress-percentage {
-    @apply text-sm font-medium text-gray-700;
+    @apply text-xs sm:text-sm font-medium text-gray-700;
   }
 
   .progress-bar-container {
-    @apply w-full bg-gray-200 rounded-full h-2.5;
+    @apply w-full bg-gray-200 rounded-full h-2 sm:h-2.5;
   }
 
   .progress-bar {
-    @apply bg-blue-600 h-2.5 rounded-full;
+    @apply bg-blue-600 h-2 sm:h-2.5 rounded-full;
   }
 
   .progress-stats {
-    @apply text-sm text-gray-600 mt-2;
+    @apply text-xs sm:text-sm text-gray-600 mt-1 sm:mt-2;
   }
 
   .course-content-container {
-    @apply bg-white rounded-lg shadow-lg p-6;
+    @apply bg-white rounded-lg shadow-lg p-4 sm:p-6;
   }
 
   .content-header {
-    @apply text-xl font-semibold mb-6;
+    @apply text-lg sm:text-xl font-semibold mb-4 sm:mb-6;
   }
 
   .modules-list {
-    @apply space-y-4;
+    @apply space-y-3 sm:space-y-4;
   }
 
   .module-card {
@@ -324,7 +324,7 @@
   }
 
   .module-button {
-    @apply w-full flex justify-between items-center p-4 text-left font-medium bg-gray-50;
+    @apply w-full flex justify-between items-center p-3 sm:p-4 text-left font-medium bg-gray-50 text-sm sm:text-base;
   }
 
   .module-button-active {
@@ -332,7 +332,7 @@
   }
 
   .chevron-icon {
-    @apply w-5 h-5 transition-transform;
+    @apply w-4 h-4 sm:w-5 sm:h-5 transition-transform;
   }
 
   .chevron-rotate {
@@ -344,7 +344,7 @@
   }
 
   .lesson-item {
-    @apply p-4 hover:bg-gray-50 flex items-center justify-between;
+    @apply p-3 sm:p-4 hover:bg-gray-50 flex items-center justify-between;
   }
 
   .lesson-content {
@@ -352,7 +352,7 @@
   }
 
   .completion-indicator {
-    @apply w-6 h-6 rounded-full flex items-center justify-center mr-3 border border-gray-300;
+    @apply w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center mr-2 sm:mr-3 border border-gray-300;
   }
 
   .completion-indicator.completed {
@@ -360,11 +360,11 @@
   }
 
   .check-icon {
-    @apply w-4 h-4 text-white;
+    @apply w-3 h-3 sm:w-4 sm:h-4 text-white;
   }
 
   .lesson-title {
-    @apply text-gray-900;
+    @apply text-gray-900 text-sm sm:text-base;
   }
 
   .lesson-title.completed-text {
@@ -372,6 +372,6 @@
   }
 
   .lesson-duration {
-    @apply text-sm text-gray-500;
+    @apply text-xs sm:text-sm text-gray-500;
   }
 }

@@ -83,7 +83,7 @@ export default function Dashboard() {
                     alt={course.title}
                     fill
                     style={{ objectFit: "cover" }}
-                    sizes="(max-width: 768px) 100vw, 25vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="course-image"
                     priority
                   />
@@ -96,7 +96,7 @@ export default function Dashboard() {
                 <h3 className="course-title">{course.title}</h3>
                 <div className="course-instructor">
                   <div className="instructor-avatar">
-                    <Image src={course.instructorProfile} width={50} height={50} className="rounded-4xl" />
+                    <Image src={course.instructorProfile} alt={course.instructor} width={50} height={50} className="rounded-4xl" />
                     </div>
                   <span className="instructor-name">{course.instructor}</span>
                 </div>

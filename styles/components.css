@@ -1,32 +1,30 @@
 @import "tailwindcss";
 
 @layer components {
-  /* StatsCard */
-
+  /* StatsCard - Improved for mobile */
   .stats-card {
-    @apply flex items-center bg-white rounded-lg shadow-sm p-6;
+    @apply flex flex-col sm:flex-row items-center bg-white rounded-lg shadow-sm p-4 sm:p-6;
   }
 
   .stats-card-icon-container {
-    @apply mr-4 flex items-center justify-center bg-purple-100 rounded-lg p-2;
+    @apply mb-3 sm:mb-0 sm:mr-4 flex items-center justify-center bg-purple-100 rounded-lg p-2;
   }
 
   .stats-card-value {
-    @apply text-2xl font-bold text-gray-900;
+    @apply text-xl sm:text-2xl font-bold text-gray-900 text-center sm:text-left;
   }
 
   .stats-card-title {
-    @apply text-sm text-gray-600;
+    @apply text-sm text-gray-600 text-center sm:text-left;
   }
 
-  /* Course Card Grid Mode */
-
+  /* Course Card Grid Mode - Improved for mobile */
   .course-card {
-    @apply bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow;
+    @apply bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow flex flex-col;
   }
 
   .course-card-image {
-    @apply h-40 p-4 relative;
+    @apply h-32 sm:h-40 p-2 sm:p-4 relative;
   }
 
   .course-card-level {
@@ -34,11 +32,11 @@
   }
 
   .course-card-content {
-    @apply p-4;
+    @apply p-3 sm:p-4;
   }
 
   .course-card-title {
-    @apply font-semibold text-lg mb-2;
+    @apply font-semibold text-base sm:text-lg mb-2;
   }
 
   .course-card-instructor {
@@ -50,7 +48,7 @@
   }
 
   .course-card-details {
-    @apply flex items-center text-sm mb-2;
+    @apply flex flex-wrap items-center text-xs sm:text-sm mb-2;
   }
 
   .course-card-rating {
@@ -62,21 +60,20 @@
   }
 
   .course-card-enrolled {
-    @apply flex items-center;
+    @apply flex items-center mt-1 sm:mt-0;
   }
 
   .course-card-enrolled-icon {
-    @apply w-4 h-4 mr-1;
+    @apply w-3 h-3 sm:w-4 sm:h-4 mr-1;
   }
 
-  /* Course Card List Mode (Horizontal) */
-
+  /* Course Card List Mode (Horizontal) - Enhanced responsiveness */
   .course-card-horizontal {
-    @apply bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow flex flex-row;
+    @apply bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow flex flex-col sm:flex-row;
   }
 
   .course-card-horizontal-image {
-    @apply h-auto w-48 p-4 relative flex-shrink-0;
+    @apply h-40 w-full sm:h-auto sm:w-48 p-2 sm:p-4 relative flex-shrink-0;
   }
 
   .course-card-horizontal-level {
@@ -84,35 +81,35 @@
   }
 
   .course-card-horizontal-content {
-    @apply p-4 flex flex-col justify-between flex-grow;
+    @apply p-3 sm:p-4 flex flex-col justify-between flex-grow;
   }
 
   .course-card-horizontal-main {
-    @apply mb-4;
+    @apply mb-3 sm:mb-4;
   }
 
   .course-card-horizontal-title {
-    @apply font-semibold text-lg mb-2;
+    @apply font-semibold text-base sm:text-lg mb-2;
   }
 
   .course-card-horizontal-description {
-    @apply text-sm text-gray-600 line-clamp-2;
+    @apply text-xs sm:text-sm text-gray-600 line-clamp-2;
   }
 
   .course-card-horizontal-footer {
-    @apply flex flex-wrap items-center justify-between gap-2;
+    @apply flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center justify-start sm:justify-between gap-2;
   }
 
   .course-card-horizontal-instructor {
-    @apply flex items-center;
+    @apply flex items-center mb-2 sm:mb-0;
   }
 
   .course-card-horizontal-avatar {
-    @apply w-6 h-6 rounded-full bg-gray-300 mr-2;
+    @apply w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-gray-300 mr-2;
   }
 
   .course-card-horizontal-details {
-    @apply flex items-center text-sm;
+    @apply flex flex-wrap items-center text-xs sm:text-sm;
   }
 
   .course-card-horizontal-rating {
@@ -124,48 +121,43 @@
   }
 
   .course-card-horizontal-divider {
-    @apply mx-2 text-gray-300;
+    @apply mx-2 text-gray-300 hidden;
   }
 
   .course-card-horizontal-enrolled {
-    @apply flex items-center;
+    @apply flex items-center mt-2 sm:mt-0;
   }
 
   .course-card-horizontal-enrolled-icon {
-    @apply w-4 h-4 mr-1;
+    @apply w-3 h-3 sm:w-4 sm:h-4 mr-1;
   }
 
-  /* Responsive adjustments */
-  @media (max-width: 640px) {
-    .course-card-horizontal {
-      @apply flex-col;
-    }
-
-    .course-card-horizontal-image {
-      @apply w-full h-40;
+  /* Additional responsive breakpoints */
+  @media (min-width: 400px) {
+    .inline-xs {
+      display: inline;
     }
   }
 
-  /* Calendar */
-
+  /* Improved calendar responsiveness */
   .calendar-container {
-    @apply bg-white p-6 rounded-lg shadow mb-8;
+    @apply bg-white p-3 sm:p-6 rounded-lg shadow mb-4 sm:mb-8;
   }
 
   .calendar-title {
-    @apply text-xl font-semibold mb-4;
+    @apply text-lg sm:text-xl font-semibold mb-3 sm:mb-4;
   }
 
   .calendar-header {
-    @apply mb-4 flex items-center justify-between;
+    @apply mb-3 sm:mb-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0;
   }
 
   .calendar-select {
-    @apply border rounded p-2;
+    @apply border rounded p-1 sm:p-2 text-sm sm:text-base w-full sm:w-auto;
   }
 
   .calendar-navigation {
-    @apply flex items-center;
+    @apply flex items-center mt-2 sm:mt-0;
   }
 
   .calendar-nav-button {
@@ -173,11 +165,11 @@
   }
 
   .calendar-nav-icon {
-    @apply w-5 h-5;
+    @apply w-4 h-4 sm:w-5 sm:h-5;
   }
 
   .calendar-month {
-    @apply mx-4 font-medium;
+    @apply mx-2 sm:mx-4 font-medium text-sm sm:text-base;
   }
 
   .calendar-table-container {
@@ -185,19 +177,19 @@
   }
 
   .calendar-table {
-    @apply w-full border-collapse;
+    @apply w-full border-collapse min-w-full;
   }
 
   .calendar-day-header {
-    @apply py-2 text-center border bg-blue-100;
+    @apply py-1 sm:py-2 text-center border bg-blue-100 text-xs sm:text-sm;
   }
 
   .calendar-day-cell {
-    @apply border p-2 h-24 align-top;
+    @apply border p-1 sm:p-2 h-16 sm:h-24 align-top;
   }
 
   .calendar-day {
-    @apply cursor-pointer flex justify-center items-center w-8 h-8 rounded-full mb-2;
+    @apply cursor-pointer flex justify-center items-center w-6 h-6 sm:w-8 sm:h-8 rounded-full mb-1 sm:mb-2 text-xs sm:text-sm;
   }
 
   .calendar-day-hover {
@@ -208,26 +200,25 @@
     @apply bg-purple-900 text-white;
   }
 
-  /* To Do List */
-
+  /* Improved To Do List responsiveness */
   .todo-container {
-    @apply bg-white p-6 rounded-lg shadow;
+    @apply bg-white p-3 sm:p-6 rounded-lg shadow;
   }
 
   .todo-title {
-    @apply text-xl font-semibold mb-4;
+    @apply text-lg sm:text-xl font-semibold mb-3 sm:mb-4;
   }
 
   .todo-filters {
-    @apply flex mb-6;
+    @apply flex flex-col sm:flex-row mb-4 sm:mb-6 gap-2 sm:gap-0;
   }
 
   .todo-filter {
-    @apply relative mr-2;
+    @apply relative mb-2 sm:mb-0 sm:mr-2 w-full sm:w-auto;
   }
 
   .todo-select {
-    @apply border rounded py-2 px-4 appearance-none pr-8;
+    @apply border rounded py-1 sm:py-2 px-2 sm:px-4 appearance-none pr-8 w-full;
   }
 
   .todo-select-icon {
@@ -235,35 +226,35 @@
   }
 
   .todo-empty {
-    @apply text-center py-12;
+    @apply text-center py-6 sm:py-12;
   }
 
   .todo-empty-icon {
-    @apply bg-blue-50 inline-block p-8 rounded-full mb-4;
+    @apply bg-blue-50 inline-block p-4 sm:p-8 rounded-full mb-3 sm:mb-4;
   }
 
   .todo-empty-text {
-    @apply text-gray-600 mb-4;
+    @apply text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base;
   }
 
   .todo-add-button {
-    @apply bg-purple-900 text-white px-4 py-2 rounded hover:bg-purple-800;
+    @apply bg-purple-900 text-white px-3 sm:px-4 py-1 sm:py-2 rounded hover:bg-purple-800 text-sm sm:text-base;
   }
 
   .todo-list {
-    @apply space-y-2 mb-4;
+    @apply space-y-1 sm:space-y-2 mb-3 sm:mb-4;
   }
 
   .todo-item {
-    @apply flex items-center p-3 border rounded hover:bg-gray-50;
+    @apply flex items-center p-2 sm:p-3 border rounded hover:bg-gray-50;
   }
 
   .todo-checkbox {
-    @apply mr-3 h-5 w-5 text-purple-600;
+    @apply mr-2 sm:mr-3 h-4 w-4 sm:h-5 sm:w-5 text-purple-600;
   }
 
   .todo-text {
-    @apply text-gray-900;
+    @apply text-gray-900 text-sm sm:text-base;
   }
 
   .todo-text-completed {
@@ -271,14 +262,14 @@
   }
 
   .todo-input-container {
-    @apply flex mt-4;
+    @apply flex mt-3 sm:mt-4;
   }
 
   .todo-input {
-    @apply border rounded-l py-2 px-4 w-full focus:outline-none focus:ring-2 focus:ring-purple-500;
+    @apply border rounded-l py-1 sm:py-2 px-2 sm:px-4 w-full focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm sm:text-base;
   }
 
   .todo-add-task-button {
-    @apply bg-purple-900 text-white px-4 py-2 rounded-r hover:bg-purple-800;
+    @apply bg-purple-900 text-white px-3 sm:px-4 py-1 sm:py-2 rounded-r hover:bg-purple-800 text-sm sm:text-base whitespace-nowrap;
   }
 }
