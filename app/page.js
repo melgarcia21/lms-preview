@@ -20,6 +20,7 @@ export default function Dashboard() {
       id: 1,
       title: "Digital Marketing Fundamentals",
       instructor: "Heinrich Wulff",
+      instructorProfile: "/images/professor-profile.jpg",
       level: "Intermediate",
       rating: 4.2,
       ratingCount: 6,
@@ -30,6 +31,7 @@ export default function Dashboard() {
       id: 2,
       title: "Website Design UI/UX",
       instructor: "Heinrich Wulff",
+      instructorProfile: "/images/professor-profile.jpg",
       level: "Intermediate",
       rating: 5,
       ratingCount: 9,
@@ -40,6 +42,7 @@ export default function Dashboard() {
       id: 3,
       title: "Visual Graphic Designing",
       instructor: "Heinrich Wulff",
+      instructorProfile: "/images/professor-profile.jpg",
       level: "Intermediate",
       rating: 4.8,
       ratingCount: 46,
@@ -50,6 +53,7 @@ export default function Dashboard() {
       id: 4,
       title: "Programming & Development with Python",
       instructor: "Heinrich Wulff",
+      instructorProfile: "/images/professor-profile.jpg",
       level: "Advanced",
       rating: 5,
       ratingCount: 3,
@@ -91,7 +95,9 @@ export default function Dashboard() {
               <div className="course-details">
                 <h3 className="course-title">{course.title}</h3>
                 <div className="course-instructor">
-                  <div className="instructor-avatar"></div>
+                  <div className="instructor-avatar">
+                    <Image src={course.instructorProfile} width={50} height={50} className="rounded-4xl" />
+                    </div>
                   <span className="instructor-name">{course.instructor}</span>
                 </div>
                 <div className="course-meta">

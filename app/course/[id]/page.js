@@ -3,6 +3,7 @@
 import React from "react";
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function CourseDetailPage({ params }) {
   const { id: courseId } = React.use(params);
@@ -79,11 +80,11 @@ export default function CourseDetailPage({ params }) {
   const progress = Math.round((completedLessons / totalLessons) * 100);
 
   return (
-    <div className="bg-gray-100 min-h-screen p-6 mx-100">
-      <div className="mb-6">
+    <div className="course-detail-container">
+      <div className="back-link-container">
         <Link href="/courses">
-          <div className="flex items-center text-blue-600 hover:text-blue-800">
-            <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="back-link">
+            <svg className="back-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             Back to My Courses
@@ -91,54 +92,52 @@ export default function CourseDetailPage({ params }) {
         </Link>
       </div>
       
-      <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
-        <div className="bg-blue-100 h-48 flex items-center justify-center">
-          <h1 className="text-3xl font-bold text-blue-900">{courseData.title}</h1>
+      <div className="course-header-card">
+        <div className="course-title-banner">
+          <h1 className="course-title">{courseData.title}</h1>
         </div>
         
-        <div className="p-6">
-          <div className="flex items-center mb-4">
-            <div className="w-10 h-10 rounded-full bg-gray-300 mr-3"></div>
-            <div>
-              <div className="font-semibold">{courseData.instructor}</div>
-              <div className="text-sm text-gray-600">Course Instructor</div>
+        <div className="course-info-container">
+          <div className="instructor-profile">
+            <div className="instructor-avatar">
+
+            </div>
+            <div className="instructor-info">
+              <div className="instructor-name">{courseData.instructor}</div>
+              <div className="instructor-role">Course Instructor</div>
             </div>
           </div>
           
-          <p className="text-gray-700 mb-6">{courseData.description}</p>
+          <p className="course-description">{courseData.description}</p>
           
-          <div className="mb-6">
-            <div className="flex justify-between mb-2">
-              <span className="text-sm font-medium text-gray-700">Course Progress</span>
-              <span className="text-sm font-medium text-gray-700">{progress}%</span>
+          <div className="progress-section">
+            <div className="progress-header">
+              <span className="progress-label">Course Progress</span>
+              <span className="progress-percentage">{progress}%</span>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-2.5">
-              <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: `${progress}%` }}></div>
+            <div className="progress-bar-container">
+              <div className="progress-bar" style={{ width: `${progress}%` }}></div>
             </div>
-            <div className="text-sm text-gray-600 mt-2">
+            <div className="progress-stats">
               {completedLessons} of {totalLessons} lessons completed
             </div>
           </div>
         </div>
       </div>
       
-      <div className="bg-white rounded-lg shadow-lg p-6">
-        <h2 className="text-xl font-semibold mb-6">Course Content</h2>
+      <div className="course-content-container">
+        <h2 className="content-header">Course Content</h2>
         
-        <div className="space-y-4">
+        <div className="modules-list">
           {courseData.modules.map((module) => (
-            <div key={module.id} className="border rounded-lg overflow-hidden">
+            <div key={module.id} className="module-card">
               <button
-                className={`w-full flex justify-between items-center p-4 text-left font-medium ${
-                  activeModule === module.id ? 'bg-blue-50 text-blue-700' : 'bg-gray-50'
-                }`}
+                className={`module-button ${activeModule === module.id ? 'module-button-active' : ''}`}
                 onClick={() => setActiveModule(activeModule === module.id ? null : module.id)}
               >
                 <span>{module.title}</span>
                 <svg
-                  className={`w-5 h-5 transition-transform ${
-                    activeModule === module.id ? 'transform rotate-180' : '' 
-                  }`}
+                  className={`chevron-icon ${activeModule === module.id ? 'chevron-rotate' : ''}`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -148,22 +147,22 @@ export default function CourseDetailPage({ params }) {
               </button>
               
               {activeModule === module.id && (
-                <div className="divide-y">
+                <div className="lessons-list">
                   {module.lessons.map((lesson) => (
-                    <div key={lesson.id} className="p-4 hover:bg-gray-50 flex items-center justify-between">
-                      <div className="flex items-center">
-                        <div className={`w-6 h-6 rounded-full flex items-center justify-center mr-3 ${
-                          lesson.completed ? 'bg-green-500' : 'border border-gray-300'
-                        }`}>
+                    <div key={lesson.id} className="lesson-item">
+                      <div className="lesson-content">
+                        <div className={`completion-indicator ${lesson.completed ? 'completed' : ''}`}>
                           {lesson.completed && (
-                            <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg className="check-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                             </svg>
                           )}
                         </div>
-                        <span className={lesson.completed ? 'text-gray-500' : ''}>{lesson.title}</span>
+                        <span className={`lesson-title ${lesson.completed ? 'completed-text' : ''}`}>
+                          {lesson.title}
+                        </span>
                       </div>
-                      <div className="text-sm text-gray-500">{lesson.duration}</div>
+                      <div className="lesson-duration">{lesson.duration}</div>
                     </div>
                   ))}
                 </div>

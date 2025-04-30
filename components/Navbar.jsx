@@ -45,8 +45,8 @@ export default function Navbar() {
   ];
   
   const user = {
-    name: "Alex Johnson",
-    email: "alex.johnson@example.com",
+    name: "Mel Garcia",
+    email: "melgarcia@gmail.com",
     role: "Student",
     avatar: null, // Uses AccountCircle icon as fallback
   };

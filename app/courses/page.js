@@ -251,13 +251,15 @@ function CourseCardHorizontal({ course }) {
               <p className="course-progress-percentage">
                 {course.progress}% Course Completed
               </p>
+          <Link href={`/course/${course.id}`} className="view-course-button-horizontal">
+            View Course
+          </Link>
+
             </div>
           )}
         </div>
         <div className="course-actions-horizontal">
-          <Link href={`/course/${course.id}`} className="view-course-button-horizontal">
-            View Course
-          </Link>
+
         </div>
       </div>
     </div>
