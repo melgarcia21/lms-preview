@@ -1,0 +1,40 @@
+{
+    "userId": 1,
+    "courses": [
+      {
+        "courseId": 1,
+        "completedLessons": [101],
+        "progress": 20
+      },
+      {
+        "courseId": 2,
+        "completedLessons": [101, 102],
+        "progress": 40
+      },
+      {
+        "courseId": 3,
+        "completedLessons": [101],
+        "progress": 20
+      },
+      {
+        "courseId": 4,
+        "completedLessons": [],
+        "progress": 0
+      },
+      {
+        "courseId": 5,
+        "completedLessons": [101, 102, 103, 201, 202, 203, 301, 302, 303, 401],
+        "progress": 90
+      },
+      {
+        "courseId": 6,
+        "completedLessons": [101, 102, 201, 202],
+        "progress": 100
+      },
+      {
+        "courseId": 7,
+        "completedLessons": [],
+        "progress": 0
+      }
+    ]
+  }

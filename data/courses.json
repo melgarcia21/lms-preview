@@ -1,0 +1,398 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Digital Marketing Fundamentals",
+      "instructor": "Heinrich Wulff",
+      "description": "Learn the fundamentals of digital marketing including social media, SEO, email marketing, and analytics.",
+      "level": "Intermediate",
+      "rating": 4.2,
+      "ratingCount": 6,
+      "enrolled": 14,
+      "image": "/placeholder-digital-marketing.jpg",
+      "price": 49.99,
+      "duration": "6 weeks",
+      "category": "Marketing",
+      "tags": ["digital marketing", "social media", "SEO", "analytics"],
+      "modules": [
+        {
+          "id": 1,
+          "title": "Introduction to Digital Marketing",
+          "lessons": [
+            {
+              "id": 101,
+              "title": "What is Digital Marketing?",
+              "duration": "15 min",
+              "completed": true
+            },
+            {
+              "id": 102,
+              "title": "The Digital Marketing Landscape",
+              "duration": "20 min",
+              "completed": false
+            },
+            {
+              "id": 103,
+              "title": "Setting Digital Marketing Goals",
+              "duration": "25 min",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Search Engine Optimization (SEO)",
+          "lessons": [
+            {
+              "id": 201,
+              "title": "SEO Fundamentals",
+              "duration": "30 min",
+              "completed": false
+            },
+            {
+              "id": 202,
+              "title": "Keyword Research",
+              "duration": "25 min",
+              "completed": false
+            },
+            {
+              "id": 203,
+              "title": "On-Page SEO",
+              "duration": "20 min",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Data Analysis with Spreadsheets",
+      "instructor": "Heinrich Wulff",
+      "description": "Master data analysis using spreadsheet software. Learn formulas, functions, pivot tables, and data visualization.",
+      "level": "Intermediate",
+      "rating": 4.5,
+      "ratingCount": 12,
+      "enrolled": 28,
+      "image": "/placeholder-data-analysis.jpg",
+      "price": 39.99,
+      "duration": "4 weeks",
+      "category": "Data Science",
+      "tags": ["spreadsheets", "excel", "data analysis", "pivot tables"],
+      "modules": [
+        {
+          "id": 1,
+          "title": "Fundamentals of Spreadsheets",
+          "lessons": [
+            {
+              "id": 101,
+              "title": "Introduction to Spreadsheets",
+              "duration": "15 min",
+              "completed": true
+            },
+            {
+              "id": 102,
+              "title": "Data Input and Organization",
+              "duration": "20 min",
+              "completed": true
+            },
+            {
+              "id": 103,
+              "title": "Formatting and Styling",
+              "duration": "25 min",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Formulas and Functions",
+          "lessons": [
+            {
+              "id": 201,
+              "title": "Basic Formulas",
+              "duration": "30 min",
+              "completed": false
+            },
+            {
+              "id": 202,
+              "title": "Advanced Functions",
+              "duration": "25 min",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Project Management Essentials",
+      "instructor": "Heinrich Wulff",
+      "description": "Learn essential project management methodologies, tools, and techniques to deliver successful projects.",
+      "level": "Intermediate",
+      "rating": 4.8,
+      "ratingCount": 46,
+      "enrolled": 76,
+      "image": "/placeholder-project-management.jpg",
+      "price": 59.99,
+      "duration": "8 weeks",
+      "category": "Business",
+      "tags": ["project management", "agile", "scrum", "kanban"],
+      "modules": [
+        {
+          "id": 1,
+          "title": "Introduction to Project Management",
+          "lessons": [
+            {
+              "id": 101,
+              "title": "What is Project Management?",
+              "duration": "15 min",
+              "completed": true
+            },
+            {
+              "id": 102,
+              "title": "Project Life Cycle",
+              "duration": "20 min",
+              "completed": false
+            },
+            {
+              "id": 103,
+              "title": "Project Management Methodologies",
+              "duration": "25 min",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Project Planning",
+          "lessons": [
+            {
+              "id": 201,
+              "title": "Defining Project Scope",
+              "duration": "30 min",
+              "completed": false
+            },
+            {
+              "id": 202,
+              "title": "Creating a Project Schedule",
+              "duration": "25 min",
+              "completed": false
+            },
+            {
+              "id": 203,
+              "title": "Resource Allocation",
+              "duration": "20 min",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Basic Programming with Python",
+      "instructor": "Heinrich Wulff",
+      "description": "Learn the basics of programming with Python, one of the most popular and versatile programming languages.",
+      "level": "Beginner",
+      "rating": 4.7,
+      "ratingCount": 82,
+      "enrolled": 120,
+      "image": "/placeholder-python.jpg",
+      "price": 49.99,
+      "duration": "10 weeks",
+      "category": "Programming",
+      "tags": ["python", "programming", "coding", "computer science"],
+      "status": "unavailable"
+    },
+    {
+      "id": 5,
+      "title": "Customer Service Basics",
+      "instructor": "Heinrich Wulff",
+      "description": "Master customer service fundamentals to provide exceptional service and build customer loyalty.",
+      "level": "Beginner",
+      "rating": 4.6,
+      "ratingCount": 35,
+      "enrolled": 98,
+      "image": "/placeholder-customer-service.jpg",
+      "price": 29.99,
+      "duration": "3 weeks",
+      "category": "Business",
+      "tags": ["customer service", "communication", "customer satisfaction"],
+      "modules": [
+        {
+          "id": 1,
+          "title": "Customer Service Fundamentals",
+          "lessons": [
+            {
+              "id": 101,
+              "title": "What is Customer Service?",
+              "duration": "15 min",
+              "completed": true
+            },
+            {
+              "id": 102,
+              "title": "Customer Service Skills",
+              "duration": "20 min",
+              "completed": true
+            },
+            {
+              "id": 103,
+              "title": "Customer Service Best Practices",
+              "duration": "25 min",
+              "completed": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Communication Skills",
+          "lessons": [
+            {
+              "id": 201,
+              "title": "Effective Communication",
+              "duration": "30 min",
+              "completed": true
+            },
+            {
+              "id": 202,
+              "title": "Active Listening",
+              "duration": "25 min",
+              "completed": true
+            },
+            {
+              "id": 203,
+              "title": "Handling Difficult Conversations",
+              "duration": "20 min",
+              "completed": true
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Problem Solving",
+          "lessons": [
+            {
+              "id": 301,
+              "title": "Problem-Solving Process",
+              "duration": "15 min",
+              "completed": true
+            },
+            {
+              "id": 302,
+              "title": "Decision Making",
+              "duration": "20 min",
+              "completed": true
+            },
+            {
+              "id": 303,
+              "title": "Creative Solutions",
+              "duration": "25 min",
+              "completed": true
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Building Customer Loyalty",
+          "lessons": [
+            {
+              "id": 401,
+              "title": "Understanding Customer Loyalty",
+              "duration": "30 min",
+              "completed": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Website Design UI/UX",
+      "instructor": "Heinrich Wulff",
+      "description": "Learn the principles of UI/UX design to create user-friendly and visually appealing websites.",
+      "level": "Intermediate",
+      "rating": 4.9,
+      "ratingCount": 58,
+      "enrolled": 112,
+      "image": "/placeholder-web-design.jpg",
+      "price": 69.99,
+      "duration": "8 weeks",
+      "category": "Design",
+      "tags": ["ui", "ux", "web design", "user experience"],
+      "modules": [
+        {
+          "id": 1,
+          "title": "UI/UX Fundamentals",
+          "lessons": [
+            {
+              "id": 101,
+              "title": "What is UI/UX?",
+              "duration": "15 min",
+              "completed": false
+            },
+            {
+              "id": 102,
+              "title": "Principles of Good Design",
+              "duration": "20 min",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Design Tools",
+          "lessons": [
+            {
+              "id": 201,
+              "title": "Introduction to Figma",
+              "duration": "25 min",
+              "completed": false
+            },
+            {
+              "id": 202,
+              "title": "Prototyping Basics",
+              "duration": "30 min",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Visual Graphic Designing",
+      "instructor": "Heinrich Wulff",
+      "description": "Explore the world of graphic design and learn to create stunning visuals.",
+      "level": "Beginner",
+      "rating": 4.3,
+      "ratingCount": 21,
+      "enrolled": 45,
+      "image": "/placeholder-graphic-design.jpg",
+      "price": 59.99,
+      "duration": "5 weeks",
+      "category": "Design",
+      "tags": ["graphic design", "visuals", "creativity"],
+      "modules": [
+        {
+          "id": 1,
+          "title": "Introduction to Graphic Design",
+          "lessons": [
+            {
+              "id": 101,
+              "title": "History of Graphic Design",
+              "duration": "10 min",
+              "completed": false
+            },
+            {
+              "id": 102,
+              "title": "Elements of Design",
+              "duration": "20 min",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

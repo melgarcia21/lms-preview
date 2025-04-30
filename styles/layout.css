@@ -1,0 +1,317 @@
+@import "tailwindcss";
+
+@layer layout {
+
+  /* Navbar */
+  
+  .navbar {
+    @apply bg-[#400040] text-white py-4 px-6 flex items-center justify-between shadow-lg;
+  }
+  
+  .navbar-logo-container {
+    @apply flex items-center;
+  }
+  
+  .navbar-logo-wrapper {
+    @apply mr-4;
+  }
+  
+  .navbar-logo {
+    @apply flex items-center;
+  }
+  
+  .navbar-brand-name {
+    @apply ml-2 text-xl font-bold;
+  }
+  
+  .navbar-links {
+    @apply relative ml-6;
+  }
+  
+  .navbar-dropdown-button {
+    @apply flex items-center bg-purple-800 px-4 py-2 rounded hover:bg-purple-700 transition-colors duration-200;
+  }
+  
+  .navbar-dropdown-icon {
+    @apply w-4 h-4 ml-2;
+  }
+  
+  .navbar-dropdown-menu {
+    @apply absolute top-full left-0 mt-1 bg-white text-gray-800 rounded shadow-lg w-48 py-2 z-10;
+  }
+  
+  .navbar-dropdown-item {
+    @apply px-4 py-2 hover:bg-gray-100 transition-colors duration-150;
+  }
+  
+  .navbar-link {
+    @apply ml-6 hover:text-gray-300 transition-colors duration-200 py-1 relative;
+  }
+  
+  .navbar-link.active {
+    @apply text-white font-medium;
+  }
+  
+  .navbar-link.active::after {
+    content: '';
+    @apply absolute left-0 bottom-0 w-full h-0.5 bg-white rounded-full;
+    animation: linkHighlight 0.3s ease-in-out;
+  }
+  
+  @keyframes linkHighlight {
+    from { width: 0; left: 50%; opacity: 0; }
+    to { width: 100%; left: 0; opacity: 1; }
+  }
+  
+  .navbar-user-menu {
+    @apply flex items-center gap-3;
+  }
+  
+  .navbar-search-container {
+    @apply relative flex items-center mr-6;
+  }
+  
+  
+  .navbar-search-input {
+    @apply bg-purple-900 text-white rounded-md h-10 px-4 py-1 pl-10 w-64 outline-none focus:ring-2 focus:ring-purple-500 placeholder-gray-300;
+  }
+  
+  /* Icon Containers & Buttons */
+  .navbar-icon-container {
+    @apply relative;
+  }
+  
+  .navbar-icon-button {
+    @apply p-2 rounded-full hover:bg-purple-700 transition-colors duration-200 relative;
+  }
+  
+  .navbar-icon {
+    @apply w-6 h-6;
+  }
+  
+  .navbar-notification-badge {
+    @apply absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center;
+  }
+  
+  /* Modal Styles */
+  .navbar-modal {
+    @apply absolute right-0 top-full mt-2 bg-white text-gray-800 rounded-lg shadow-xl z-20 w-80 overflow-hidden;
+  }
+  
+  .modal-header {
+    @apply flex items-center justify-between px-4 py-3 bg-gray-100 border-b;
+  }
+  
+  .modal-title {
+    @apply text-lg font-semibold text-gray-800;
+  }
+  
+  .modal-actions {
+    @apply flex items-center;
+  }
+  
+  .modal-action-button {
+    @apply text-sm text-purple-600 hover:text-purple-800;
+  }
+  
+  .modal-content {
+    @apply p-2 max-h-80 overflow-y-auto;
+  }
+  
+  .modal-footer {
+    @apply p-3 bg-gray-50 border-t text-center;
+  }
+  
+  .modal-footer-link {
+    @apply text-sm text-purple-600 hover:text-purple-800;
+  }
+  
+  .empty-state {
+    @apply text-center text-gray-500 py-8;
+  }
+  
+  /* Notifications Styles */
+  .notifications-list {
+    @apply divide-y divide-gray-100;
+  }
+  
+  .notification-item {
+    @apply p-3 hover:bg-gray-50 cursor-pointer transition-colors duration-150;
+  }
+  
+  .notification-item.unread {
+    @apply bg-purple-50 border-l-4 border-purple-500;
+  }
+  
+  .notification-text {
+    @apply text-sm text-gray-800 mb-1;
+  }
+  
+  .notification-time {
+    @apply text-xs text-gray-500;
+  }
+  
+  /* Chat Styles */
+  .chats-list {
+    @apply divide-y divide-gray-100;
+  }
+  
+  .chat-item {
+    @apply p-3 flex items-center hover:bg-gray-50 cursor-pointer transition-colors duration-150 relative;
+  }
+  
+  .chat-avatar {
+    @apply mr-3 flex-shrink-0;
+  }
+  
+  .avatar-fallback {
+    @apply w-10 h-10 text-gray-400;
+  }
+  
+  .chat-content {
+    @apply flex-1 min-w-0;
+  }
+  
+  .chat-header {
+    @apply flex items-center justify-between mb-1;
+  }
+  
+  .chat-name {
+    @apply text-sm font-medium text-gray-800;
+  }
+  
+  .chat-time {
+    @apply text-xs text-gray-500;
+  }
+  
+  .chat-message {
+    @apply text-sm text-gray-600 truncate;
+  }
+  
+  .chat-badge {
+    @apply bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center;
+  }
+  
+  /* Profile Styles */
+  .profile-modal {
+    @apply w-72;
+  }
+  
+  .profile-header {
+    @apply p-4 bg-gradient-to-r from-purple-900 to-purple-700 flex items-center;
+  }
+  
+  .profile-avatar {
+    @apply mr-3;
+  }
+  
+  .profile-avatar-icon {
+    @apply w-14 h-14 text-white;
+  }
+  
+  .profile-info {
+    @apply text-white;
+  }
+  
+  .profile-name {
+    @apply font-bold;
+  }
+  
+  .profile-email {
+    @apply text-sm text-gray-200 truncate max-w-full;
+  }
+  
+  .profile-role {
+    @apply text-xs py-1 px-2 bg-purple-500 rounded-full inline-block mt-1;
+  }
+  
+  .profile-menu {
+    @apply p-2;
+  }
+  
+  .profile-menu-item {
+    @apply flex items-center p-3 rounded-md hover:bg-gray-100 cursor-pointer transition-colors duration-150 text-gray-700;
+  }
+  
+  .profile-menu-icon {
+    @apply w-5 h-5 mr-3 text-gray-500;
+  }
+  
+  .profile-divider {
+    @apply my-2 border-gray-200;
+  }
+  
+  .profile-menu-item.logout {
+    @apply text-red-600 w-full text-left;
+  }
+  
+  .profile-menu-item.logout:hover {
+    @apply bg-red-50;
+  }
+
+  /* Footer */
+
+  .footer {
+    @apply bg-gray-900 text-gray-400;
+  }
+
+  .footer-container {
+    @apply max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 text-center;
+  }
+
+  .footer-intro-label {
+    @apply text-indigo-400 text-sm font-medium mb-2;
+  }
+
+  .footer-heading {
+    @apply text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-4;
+  }
+
+  .footer-description {
+    @apply max-w-xl mx-auto text-base sm:text-lg md:text-lg mb-6;
+  }
+
+  .footer-cta-button {
+    @apply inline-block px-6 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-400 transition;
+  }
+
+  .footer-divider {
+    @apply border-t border-gray-700;
+  }
+
+  .footer-logos {
+    @apply flex gap-1;
+  }
+
+  .footer-logo {
+    @apply block w-20 h-20 m-2;
+  }
+
+  .footer-grid {
+    @apply max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-5 gap-8 text-sm;
+  }
+
+  .footer-column-title {
+    @apply text-white font-semibold mb-4;
+  }
+
+  .footer-link {
+    @apply hover:text-gray-200 transition;
+  }
+
+  .footer-bottom {
+    @apply max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm;
+  }
+
+  .footer-copyright {
+    @apply text-gray-500;
+  }
+
+  .footer-social-icons {
+    @apply flex gap-4 text-gray-400;
+  }
+
+  .footer-social-icon {
+    @apply hover:text-white text-lg;
+  }
+}

@@ -1,0 +1,284 @@
+@import "tailwindcss";
+
+@layer components {
+  /* StatsCard */
+
+  .stats-card {
+    @apply flex items-center bg-white rounded-lg shadow-sm p-6;
+  }
+
+  .stats-card-icon-container {
+    @apply mr-4 flex items-center justify-center bg-purple-100 rounded-lg p-2;
+  }
+
+  .stats-card-value {
+    @apply text-2xl font-bold text-gray-900;
+  }
+
+  .stats-card-title {
+    @apply text-sm text-gray-600;
+  }
+
+  /* Course Card Grid Mode */
+
+  .course-card {
+    @apply bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow;
+  }
+
+  .course-card-image {
+    @apply h-40 p-4 relative;
+  }
+
+  .course-card-level {
+    @apply absolute top-2 left-2 bg-blue-500 text-white px-2 py-1 rounded text-xs;
+  }
+
+  .course-card-content {
+    @apply p-4;
+  }
+
+  .course-card-title {
+    @apply font-semibold text-lg mb-2;
+  }
+
+  .course-card-instructor {
+    @apply flex items-center mb-2;
+  }
+
+  .course-card-avatar {
+    @apply w-6 h-6 rounded-full bg-gray-300 mr-2;
+  }
+
+  .course-card-details {
+    @apply flex items-center text-sm mb-2;
+  }
+
+  .course-card-rating {
+    @apply text-yellow-500 mr-1;
+  }
+
+  .course-card-divider {
+    @apply mx-2 text-gray-300;
+  }
+
+  .course-card-enrolled {
+    @apply flex items-center;
+  }
+
+  .course-card-enrolled-icon {
+    @apply w-4 h-4 mr-1;
+  }
+
+  /* Course Card List Mode (Horizontal) */
+
+  .course-card-horizontal {
+    @apply bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow flex flex-row;
+  }
+
+  .course-card-horizontal-image {
+    @apply h-auto w-48 p-4 relative flex-shrink-0;
+  }
+
+  .course-card-horizontal-level {
+    @apply absolute top-2 left-2 bg-blue-500 text-white px-2 py-1 rounded text-xs;
+  }
+
+  .course-card-horizontal-content {
+    @apply p-4 flex flex-col justify-between flex-grow;
+  }
+
+  .course-card-horizontal-main {
+    @apply mb-4;
+  }
+
+  .course-card-horizontal-title {
+    @apply font-semibold text-lg mb-2;
+  }
+
+  .course-card-horizontal-description {
+    @apply text-sm text-gray-600 line-clamp-2;
+  }
+
+  .course-card-horizontal-footer {
+    @apply flex flex-wrap items-center justify-between gap-2;
+  }
+
+  .course-card-horizontal-instructor {
+    @apply flex items-center;
+  }
+
+  .course-card-horizontal-avatar {
+    @apply w-6 h-6 rounded-full bg-gray-300 mr-2;
+  }
+
+  .course-card-horizontal-details {
+    @apply flex items-center text-sm;
+  }
+
+  .course-card-horizontal-rating {
+    @apply flex items-center;
+  }
+
+  .course-card-horizontal-star {
+    @apply text-yellow-500 mr-1;
+  }
+
+  .course-card-horizontal-divider {
+    @apply mx-2 text-gray-300;
+  }
+
+  .course-card-horizontal-enrolled {
+    @apply flex items-center;
+  }
+
+  .course-card-horizontal-enrolled-icon {
+    @apply w-4 h-4 mr-1;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .course-card-horizontal {
+      @apply flex-col;
+    }
+
+    .course-card-horizontal-image {
+      @apply w-full h-40;
+    }
+  }
+
+  /* Calendar */
+
+  .calendar-container {
+    @apply bg-white p-6 rounded-lg shadow mb-8;
+  }
+
+  .calendar-title {
+    @apply text-xl font-semibold mb-4;
+  }
+
+  .calendar-header {
+    @apply mb-4 flex items-center justify-between;
+  }
+
+  .calendar-select {
+    @apply border rounded p-2;
+  }
+
+  .calendar-navigation {
+    @apply flex items-center;
+  }
+
+  .calendar-nav-button {
+    @apply text-gray-600 hover:text-gray-800;
+  }
+
+  .calendar-nav-icon {
+    @apply w-5 h-5;
+  }
+
+  .calendar-month {
+    @apply mx-4 font-medium;
+  }
+
+  .calendar-table-container {
+    @apply overflow-x-auto;
+  }
+
+  .calendar-table {
+    @apply w-full border-collapse;
+  }
+
+  .calendar-day-header {
+    @apply py-2 text-center border bg-blue-100;
+  }
+
+  .calendar-day-cell {
+    @apply border p-2 h-24 align-top;
+  }
+
+  .calendar-day {
+    @apply cursor-pointer flex justify-center items-center w-8 h-8 rounded-full mb-2;
+  }
+
+  .calendar-day-hover {
+    @apply hover:bg-gray-100;
+  }
+
+  .calendar-day-selected {
+    @apply bg-purple-900 text-white;
+  }
+
+  /* To Do List */
+
+  .todo-container {
+    @apply bg-white p-6 rounded-lg shadow;
+  }
+
+  .todo-title {
+    @apply text-xl font-semibold mb-4;
+  }
+
+  .todo-filters {
+    @apply flex mb-6;
+  }
+
+  .todo-filter {
+    @apply relative mr-2;
+  }
+
+  .todo-select {
+    @apply border rounded py-2 px-4 appearance-none pr-8;
+  }
+
+  .todo-select-icon {
+    @apply pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700;
+  }
+
+  .todo-empty {
+    @apply text-center py-12;
+  }
+
+  .todo-empty-icon {
+    @apply bg-blue-50 inline-block p-8 rounded-full mb-4;
+  }
+
+  .todo-empty-text {
+    @apply text-gray-600 mb-4;
+  }
+
+  .todo-add-button {
+    @apply bg-purple-900 text-white px-4 py-2 rounded hover:bg-purple-800;
+  }
+
+  .todo-list {
+    @apply space-y-2 mb-4;
+  }
+
+  .todo-item {
+    @apply flex items-center p-3 border rounded hover:bg-gray-50;
+  }
+
+  .todo-checkbox {
+    @apply mr-3 h-5 w-5 text-purple-600;
+  }
+
+  .todo-text {
+    @apply text-gray-900;
+  }
+
+  .todo-text-completed {
+    @apply line-through text-gray-500;
+  }
+
+  .todo-input-container {
+    @apply flex mt-4;
+  }
+
+  .todo-input {
+    @apply border rounded-l py-2 px-4 w-full focus:outline-none focus:ring-2 focus:ring-purple-500;
+  }
+
+  .todo-add-task-button {
+    @apply bg-purple-900 text-white px-4 py-2 rounded-r hover:bg-purple-800;
+  }
+}

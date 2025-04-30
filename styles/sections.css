@@ -1,0 +1,226 @@
+@import 'tailwindcss';
+
+@layer sections {
+
+    /* Dashboard */
+
+    .dashboard-container {
+      @apply px-36 py-12 bg-gray-100 min-h-screen;
+    }
+  
+    .dashboard-content {
+      @apply max-w-7xl mx-auto;
+    }
+  
+    .dashboard-header {
+      @apply text-2xl font-bold mb-6;
+    }
+  
+    .stats-grid {
+      @apply grid grid-cols-1 md:grid-cols-4 gap-4 mb-8;
+    }
+  
+    .recommended-header {
+      @apply text-xl font-semibold mb-4;
+    }
+  
+    .courses-grid {
+      @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8;
+    }
+  
+    .course-card {
+      @apply bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow;
+    }
+  
+    .course-image-container {
+      @apply h-40 relative flex items-center justify-center bg-gray-100;
+    }
+  
+    .course-image {
+      @apply rounded;
+    }
+  
+    .course-level {
+      @apply absolute top-2 left-2 bg-blue-500 text-white px-2 py-1 rounded text-xs z-10;
+    }
+  
+    .course-details {
+      @apply p-4;
+    }
+  
+    .course-title {
+      @apply font-semibold text-lg mb-2;
+    }
+  
+    .course-instructor {
+      @apply flex items-center mb-2;
+    }
+  
+    .instructor-avatar {
+      @apply w-6 h-6 rounded-full bg-gray-300 mr-2;
+    }
+  
+    .instructor-name {
+      @apply text-sm text-gray-600;
+    }
+  
+    .course-meta {
+      @apply flex items-center text-sm mb-2;
+    }
+  
+    .course-rating {
+      @apply text-yellow-500 mr-1;
+    }
+  
+    .rating-text {
+      @apply text-gray-600;
+    }
+  
+    .divider {
+      @apply mx-2 text-gray-300;
+    }
+  
+    .course-enrollment {
+      @apply flex items-center;
+    }
+  
+    .enrollment-icon {
+      @apply w-4 h-4 mr-1;
+    }
+
+
+/* Course View */
+
+.courses-container {
+    @apply container mx-auto px-4 md:px-8 lg:px-12 xl:px-32 py-8;
+  }
+  
+  .courses-header {
+    @apply text-2xl font-bold mb-4;
+  }
+  
+  .courses-toolbar {
+    @apply flex flex-col md:flex-row justify-between items-center mb-6 gap-4;
+  }
+  
+  .categories-tabs {
+    @apply flex flex-wrap gap-2 md:space-x-4;
+  }
+  
+  .category-tab {
+    @apply px-4 py-2 rounded transition-colors;
+  }
+  
+  .active-tab {
+    @apply bg-purple-800 text-white;
+  }
+  
+  .inactive-tab {
+    @apply bg-gray-200 hover:bg-gray-300;
+  }
+  
+  .view-toggle {
+    @apply flex rounded-lg p-1 bg-gray-100;
+  }
+  
+  .view-button {
+    @apply p-2 rounded flex items-center transition-colors;
+  }
+  
+  .active-view {
+    @apply bg-purple-900 text-white;
+  }
+  
+  .inactive-view {
+    @apply hover:bg-gray-300;
+  }
+  
+  /* Grid View */
+  .courses-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+  }
+  
+  .course-card-grid {
+    @apply bg-white rounded-xl shadow hover:shadow-lg transition-shadow flex flex-col justify-between h-[480px];
+  }
+  
+  .course-image-grid {
+    @apply w-full h-44 object-cover rounded-t-xl;
+  }
+  
+  .course-details-grid {
+    @apply flex-1 flex flex-col px-6 pt-4;
+  }
+  
+  /* List View */
+  .courses-list {
+    @apply flex flex-col gap-6;
+  }
+  
+  .course-card-horizontal {
+    @apply bg-white rounded-xl shadow hover:shadow-lg transition-shadow flex flex-col md:flex-row h-auto md:h-56;
+  }
+  
+  .course-image-horizontal {
+    @apply w-full md:w-56 h-40 md:h-full object-cover rounded-t-xl md:rounded-none md:rounded-l-xl;
+  }
+  
+  .course-details-horizontal {
+    @apply flex-1 flex flex-col p-4 md:p-6 justify-between gap-4;
+  }
+  
+  .course-info-horizontal {
+    @apply flex-1;
+  }
+  
+  /* Common styles */
+  .course-title {
+    @apply font-bold text-lg mb-2;
+  }
+  
+  .course-instructor {
+    @apply flex items-center mb-3;
+  }
+  
+  .instructor-avatar {
+    @apply w-7 h-7 rounded-full mr-2;
+  }
+  
+  .instructor-name {
+    @apply text-sm text-gray-700;
+  }
+  
+  .course-progress-text {
+    @apply text-sm text-gray-800 mb-2;
+  }
+  
+  .course-progress-bar {
+    @apply mb-2;
+  }
+  
+  .course-progress-percentage {
+    @apply text-sm text-gray-800 mb-2;
+  }
+  
+  .course-progress-container {
+    @apply w-full max-w-full mt-2;
+  }
+  
+  /* Actions */
+  .course-actions {
+    @apply px-6 pb-6;
+  }
+  
+  .view-course-button {
+    @apply block w-full border border-gray-400 rounded-md py-2 text-center font-medium hover:bg-gray-100 transition;
+  }
+  
+  .course-actions-horizontal {
+    @apply mt-4 md:mt-0 px-4 pb-4 md:p-0 flex justify-end items-end;
+  }
+  
+  .view-course-button-horizontal {
+    @apply border border-gray-400 rounded-md px-6 py-2.5 text-center font-medium hover:bg-gray-100 transition whitespace-nowrap;
+  }
+
+  }
