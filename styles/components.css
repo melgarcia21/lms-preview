@@ -2,8 +2,13 @@
 
 @layer components {
   /* StatsCard - Improved for mobile */
+
+  .stats-container {
+    @apply bg-white rounded-lg shadow-sm; 
+  }
+
   .stats-card {
-    @apply flex flex-col sm:flex-row items-center bg-white rounded-lg shadow-sm p-4 sm:p-6;
+    @apply flex flex-col sm:flex-row items-center p-4 sm:p-6;
   }
 
   .stats-card-icon-container {

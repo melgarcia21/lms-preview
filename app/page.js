@@ -7,7 +7,7 @@ import Calendar from "../components/dashboard/Calendar";
 import TodoList from "../components/dashboard/TodoList";
 
 export default function Dashboard() {
-  const userName = "user.name";
+  const userName = "Mel Garcia";
   const stats = [
     { id: 1, title: "Course Enrolled", value: 5, icon: "📚" },
     { id: 2, title: "Course Completed", value: 1, icon: "✅" },
@@ -66,10 +66,15 @@ export default function Dashboard() {
     <div className="dashboard-container">
       <div className="dashboard-content">
         <h1 className="dashboard-header">Welcome, {userName}!</h1>
+
+        <div className="stats-container">
+          
         <div className="stats-grid">
           {stats.map((stat) => (
             <StatsCard key={stat.id} {...stat} />
           ))}
+        </div>
+
         </div>
 
         <h2 className="recommended-header">Recommended Courses</h2>

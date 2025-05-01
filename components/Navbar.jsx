@@ -41,9 +41,9 @@ export default function Navbar() {
     { id: 4, text: "New comment on your discussion post", time: "2 days ago", isRead: true },
   ];
   const chats = [
-    { id: 1, name: "John Smith", message: "Hi, can you help me with the assignment?", time: "5 mins ago", unread: 2, avatar: "/images/avatar1.png" },
-    { id: 2, name: "Sarah Wilson", message: "Thanks for your feedback!", time: "1 hour ago", unread: 0, avatar: "/images/avatar2.png" },
-    { id: 3, name: "UX Design Group", message: "Mike: I've shared the resources...", time: "Yesterday", unread: 4, avatar: "/images/group.png" },
+    { id: 1, name: "Prof. Henry", message: "Hi, I posted new assignment on ...?", time: "5 mins ago", unread: 2, avatar: "/images/professor-profile.jpg" },
+    { id: 2, name: "Prof. Henry", message: "Thanks for your feedback!", time: "1 hour ago", unread: 0, avatar: "/images/professor-profile.jpg" },
+    { id: 3, name: "UX Design Group", message: "I've shared the resources...", time: "Yesterday", unread: 4, avatar: "/images/professor-profile.jpg" },
   ];
   const user = {
     name: "Mel Garcia",
@@ -52,7 +52,7 @@ export default function Navbar() {
     avatar: null,
   };
 
-  // Close modals AND mobile menu when clicking outside
+
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -67,11 +67,10 @@ export default function Navbar() {
       if (profileRef.current && !profileRef.current.contains(event.target)) {
         setIsProfileOpen(false);
       }
-      // Close mobile menu if clicking outside the navbar area (mobileMenuRef scope)
-      // Check if the click is outside the mobile menu container AND the toggle button
+
       if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target) && isMobileMenuOpen) {
-         // Check if the click target is NOT the menu button itself
-         const menuButton = document.getElementById('mobile-menu-button'); // Add ID to button
+
+         const menuButton = document.getElementById('mobile-menu-button'); 
          if (menuButton && !menuButton.contains(event.target)) {
             setIsMobileMenuOpen(false);
          }
@@ -82,12 +81,12 @@ export default function Navbar() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isMobileMenuOpen]); // Add isMobileMenuOpen dependency
+  }, [isMobileMenuOpen]);
 
-  // Toggle mobile menu
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-    // Close other potentially open dropdowns/modals when opening mobile menu
+
     if (!isMobileMenuOpen) {
         setIsDropdownOpen(false);
         setIsNotificationsOpen(false);
@@ -96,31 +95,31 @@ export default function Navbar() {
     }
   };
 
-  // Close mobile menu when a link is clicked
+
   const handleLinkClick = () => {
     setIsMobileMenuOpen(false);
   };
 
-  // Close other modals when opening a new one
+
   const toggleNotifications = () => {
     setIsNotificationsOpen(!isNotificationsOpen);
     setIsChatsOpen(false);
     setIsProfileOpen(false);
-    setIsMobileMenuOpen(false); // Close mobile menu if open
+    setIsMobileMenuOpen(false);
   };
 
   const toggleChats = () => {
     setIsChatsOpen(!isChatsOpen);
     setIsNotificationsOpen(false);
     setIsProfileOpen(false);
-    setIsMobileMenuOpen(false); // Close mobile menu if open
+    setIsMobileMenuOpen(false);
   };
 
   const toggleProfile = () => {
     setIsProfileOpen(!isProfileOpen);
     setIsNotificationsOpen(false);
     setIsChatsOpen(false);
-    setIsMobileMenuOpen(false); // Close mobile menu if open
+    setIsMobileMenuOpen(false);
   };
 
   const toggleDropdown = () => {
@@ -129,15 +128,15 @@ export default function Navbar() {
 
   const markAllAsRead = () => {
     console.log("Marked all notifications as read");
-    // Add actual logic here
+
   };
 
   return (
-    // Add ref here for click outside detection
+
     <nav className="navbar" ref={mobileMenuRef}>
       <div className="navbar-logo-container">
         <div className="navbar-logo-wrapper">
-          <Link href="/" onClick={handleLinkClick}> {/* Close menu on logo click */}
+          <Link href="/" onClick={handleLinkClick}>
             <div className="navbar-logo">
               <Image
                 src="/images/iflde-logo.png"
@@ -153,7 +152,7 @@ export default function Navbar() {
 
       {/* --- Mobile Menu Button --- */}
       <button
-        id="mobile-menu-button" // Add ID for click outside check
+        id="mobile-menu-button" 
         className="navbar-menu-button"
         onClick={toggleMobileMenu}
         aria-label="Toggle menu"
@@ -204,17 +203,9 @@ export default function Navbar() {
           <div className={`navbar-link ${pathname === '/' ? 'active' : ''}`}>Dashboard</div>
         </Link>
         <Link href="/courses" onClick={handleLinkClick}>
-          <div className={`navbar-link ${pathname === '/courses' ? 'active' : ''}`}>My courses</div>
+          <div className={`navbar-link ${pathname === '/courses' ? 'active' : ''}`}>Courses</div>
         </Link>
 
-        {/* Search Bar - moved inside collapsible container */}
-         <div className="navbar-search-container">
-           <input
-             type="text"
-             placeholder="Search Courses"
-             className="navbar-search-input"
-           />
-         </div>
       </div>
 
        {/* --- User Menu Icons (Notifications, Chat, Profile) ---

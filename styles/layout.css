@@ -42,7 +42,7 @@
 }
 
 .navbar-dropdown-button {
-    @apply flex items-center justify-between w-full px-4 py-3 md:py-2 rounded md:bg-purple-800 md:hover:bg-purple-700 transition-colors duration-200 text-left;
+    @apply flex items-center justify-between w-full px-4 py-3 md:py-2 rounded md:hover:bg-purple-900 transition-colors duration-200 text-left;
     @apply md:w-auto md:justify-start;
 }
 
@@ -78,13 +78,7 @@
     to { width: 100%; left: 0; opacity: 1; }
 }
 
-.navbar-search-container {
-    @apply relative flex items-center w-full px-4 pt-3 pb-2 md:px-0 md:pb-0 md:pt-0 md:w-auto md:ml-6;
-}
 
-.navbar-search-input {
-    @apply bg-purple-900 text-white rounded-md h-10 px-4 py-1 w-full outline-none focus:ring-2 focus:ring-purple-500 placeholder-gray-300;
-}
 
 .navbar-user-menu {
     @apply flex items-center gap-1 sm:gap-2 ml-auto;

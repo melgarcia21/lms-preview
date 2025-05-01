@@ -87,7 +87,7 @@ export default function CourseDetailPage({ params }) {
             <svg className="back-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            Back to My Courses
+            Back to Courses
           </div>
         </Link>
       </div>

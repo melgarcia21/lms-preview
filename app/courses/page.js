@@ -102,7 +102,7 @@ export default function CoursesPage() {
 
   return (
     <div className="courses-container">
-      <h1 className="courses-header">My Courses</h1>
+      <h1 className="courses-header">Courses</h1>
       <div className="courses-toolbar">
         <div className="categories-tabs">
           {categories.map((category) => (
